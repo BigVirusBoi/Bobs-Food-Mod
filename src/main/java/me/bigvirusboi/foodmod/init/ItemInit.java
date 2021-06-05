@@ -24,6 +24,7 @@ public class ItemInit {
     public static final RegistryObject<Item> CHOCOLATE = registerUnobtainableFood("chocolate", ModFoods.CHOCOLATE);
     public static final RegistryObject<Item> BACON = registerUnobtainableFood("bacon", ModFoods.BACON);
     public static final RegistryObject<Item> COOKED_BACON = registerUnobtainableFood("cooked_bacon", ModFoods.COOKED_BACON);
+    public static final RegistryObject<Item> ICE_CREAM_CONE = registerUnobtainableFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
 
     private static RegistryObject<Item> register(String name, Supplier<? extends Item> item) {
         NEEDS_MODELS.add(name);
