@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
 license = "MIT"
-#issueTrackerURL="http://my.issue.tracker/"
+issueTrackerURL="https://github.com/BigVirusBoi/Bobs-Food-Mod/issues"
 
 [[mods]]
 modId = "bobs_food_mod"
