@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 
 public class Compostables {
-    private static void register(RegistryObject<Item> item, float chance) {
+    private static void register(RegistryObject<? extends Item> item, float chance) {
         ComposterBlock.CHANCES.put(item.get(), chance);
     }
 

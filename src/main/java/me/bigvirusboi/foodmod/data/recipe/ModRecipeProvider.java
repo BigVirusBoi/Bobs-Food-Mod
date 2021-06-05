@@ -25,10 +25,16 @@ public class ModRecipeProvider extends RecipeProvider {
                 .key('D', Items.DIAMOND).key('A', Items.GOLDEN_APPLE)
                 .patternLine(" D ")
                 .patternLine("DAD")
-                .patternLine(" D ").build(consumer, modId("diamond_apple"));
+                .patternLine(" D ").build(consumer);
 
         buildShapelessRecipe(ItemInit.HONEYED_APPLE.get(), 1, Items.HONEY_BOTTLE)
-                .addIngredient(Items.APPLE).addIngredient(Items.HONEY_BOTTLE).build(consumer, modId("honeyed_apple"));
+                .addIngredient(Items.APPLE).addIngredient(Items.HONEY_BOTTLE).build(consumer);
+        buildShapelessRecipe(ItemInit.ICE_CREAM.get(), 1, Items.MILK_BUCKET)
+                .addIngredient(Items.MILK_BUCKET).addIngredient(Items.SNOWBALL).addIngredient(Items.SUGAR)
+                .build(consumer);
+        buildShapelessRecipe(ItemInit.CHOCOLATE_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
+                .addIngredient(ItemInit.CHOCOLATE.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .build(consumer);
 
         // Meat
         buildMeatRecipes(ItemInit.BACON.get(), ItemInit.COOKED_BACON.get(), ItemInit.BACON.get(), consumer);
@@ -49,7 +55,7 @@ public class ModRecipeProvider extends RecipeProvider {
         String path = Registry.ITEM.getKey(result).getPath();
 
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(input), result, 0.35F, 200)
-                .addCriterion("has_item", hasItem(criterion)).build(consumer, modId(path));
+                .addCriterion("has_item", hasItem(criterion)).build(consumer);
         CookingRecipeBuilder.cookingRecipe(Ingredient.fromItems(input), result, 0.35F, 100, CookingRecipeSerializer.SMOKING)
                 .addCriterion("has_item", hasItem(criterion)).build(consumer, modId(path + "_from_smoking"));
         CookingRecipeBuilder.cookingRecipe(Ingredient.fromItems(input), result, 0.35F, 100, CookingRecipeSerializer.CAMPFIRE_COOKING)
