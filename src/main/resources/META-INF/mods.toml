@@ -1,0 +1,17 @@
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "MIT"
+#issueTrackerURL="http://my.issue.tracker/"
+
+[[mods]]
+modId = "bobs_food_mod"
+version = "${file.jarVersion}"
+displayName = "Bob's Food Mod"
+#updateJSONURL="http://myurl.me/"
+#displayURL="http://example.com/"
+#logoFile="logo.png"
+credits="BigVirusBoi"
+authors = "BigVirusBoi"
+description = '''
+
+'''
