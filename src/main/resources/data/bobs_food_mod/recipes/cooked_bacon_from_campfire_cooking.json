@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "bobs_food_mod:bacon"
+  },
+  "result": "bobs_food_mod:cooked_bacon",
+  "experience": 0.35,
+  "cookingtime": 600
+}
