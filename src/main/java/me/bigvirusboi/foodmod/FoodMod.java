@@ -1,11 +1,10 @@
 package me.bigvirusboi.foodmod;
 
 import me.bigvirusboi.foodmod.client.ClientEventBus;
-import me.bigvirusboi.foodmod.init.BlockInit;
+import me.bigvirusboi.foodmod.init.Compostables;
 import me.bigvirusboi.foodmod.init.ItemInit;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,7 +26,6 @@ public class FoodMod {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::commonSetup);
 
-        BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -35,9 +33,7 @@ public class FoodMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent e) {
-        e.enqueueWork(() -> {
-            //ComposterBlock.CHANCES.put(Items.ACACIA_BOAT, 1f);
-        });
+        e.enqueueWork(Compostables::registerCompostables);
     }
 
 
@@ -54,7 +50,7 @@ public class FoodMod {
         @Nonnull
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Items.DIAMOND_SWORD);
+            return new ItemStack(ItemInit.HONEYED_APPLE.get());
         }
     }
 

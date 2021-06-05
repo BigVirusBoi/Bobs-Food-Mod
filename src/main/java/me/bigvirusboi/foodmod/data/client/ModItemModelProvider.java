@@ -15,7 +15,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-
+        buildItem("honeyed_apple");
     }
 
 
