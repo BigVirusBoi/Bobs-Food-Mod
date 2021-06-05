@@ -3,6 +3,7 @@ package me.bigvirusboi.foodmod.data;
 import me.bigvirusboi.foodmod.FoodMod;
 import me.bigvirusboi.foodmod.data.client.ModBlockStateProvider;
 import me.bigvirusboi.foodmod.data.client.ModItemModelProvider;
+import me.bigvirusboi.foodmod.data.recipe.ModRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,5 +20,7 @@ public final class DataGenerators {
 
         gen.addProvider(new ModBlockStateProvider(gen, existingFileHelper));
         gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
+
+        gen.addProvider(new ModRecipeProvider(gen));
     }
 }

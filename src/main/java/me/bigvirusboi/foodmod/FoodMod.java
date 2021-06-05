@@ -3,11 +3,17 @@ package me.bigvirusboi.foodmod;
 import me.bigvirusboi.foodmod.client.ClientEventBus;
 import me.bigvirusboi.foodmod.init.Compostables;
 import me.bigvirusboi.foodmod.init.ItemInit;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -36,13 +42,20 @@ public class FoodMod {
         e.enqueueWork(Compostables::registerCompostables);
     }
 
+    @SubscribeEvent
+    public void onToolTip(ItemTooltipEvent e) {
+        Item item = e.getItemStack().getItem();
+        if (ItemInit.UNOBTAINABLE.contains(item)) {
+            e.getToolTip().add(new TranslationTextComponent(I18n.format("tooltip.bobs_food_mod.unobtainable")));
+        }
+    }
+
 
 
     public static final FoodItemGroup GROUP = FoodItemGroup.instance;
-    public static final UnobtainableItemGroup UNOBTAINABLE = UnobtainableItemGroup.instance;
 
     private static class FoodItemGroup extends ItemGroup {
-        public static final FoodItemGroup instance = new FoodItemGroup(ItemGroup.GROUPS.length, "bobsFood");
+        public static final FoodItemGroup instance = new FoodItemGroup(ItemGroup.GROUPS.length, "bobs_food");
 
         private FoodItemGroup(int index, String label) {
             super(index, label);
@@ -52,20 +65,6 @@ public class FoodMod {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ItemInit.HONEYED_APPLE.get());
-        }
-    }
-
-    private static class UnobtainableItemGroup extends ItemGroup {
-        public static final UnobtainableItemGroup instance = new UnobtainableItemGroup(ItemGroup.GROUPS.length, "unobtainable");
-
-        private UnobtainableItemGroup(int index, String label) {
-            super(index, label);
-        }
-
-        @Nonnull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ItemInit.CHOCOLATE.get());
         }
     }
 

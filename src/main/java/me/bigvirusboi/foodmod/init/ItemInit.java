@@ -16,6 +16,7 @@ import java.util.function.Supplier;
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FoodMod.MOD_ID);
     public static final Set<String> NEEDS_MODELS = Sets.newHashSet();
+    public static final Set<Item> UNOBTAINABLE = Sets.newHashSet();
 
     public static final RegistryObject<Item> HONEYED_APPLE = registerFood("honeyed_apple", ModFoods.HONEYED_APPLE);
     public static final RegistryObject<Item> DIAMOND_APPLE = registerFood("diamond_apple", ModFoods.DIAMOND_APPLE);
@@ -35,7 +36,8 @@ public class ItemInit {
     }
 
     private static RegistryObject<Item> registerUnobtainableFood(String name, Food food) {
-        Item item = new Item(new Item.Properties().food(food).group(FoodMod.UNOBTAINABLE));
+        Item item = new Item(new Item.Properties().food(food).group(FoodMod.GROUP));
+        UNOBTAINABLE.add(item);
         return register(name, () -> item);
     }
 }

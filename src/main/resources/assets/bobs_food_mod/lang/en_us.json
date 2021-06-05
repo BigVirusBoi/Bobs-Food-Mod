@@ -1,6 +1,6 @@
 {
-  "itemGroup.bobsFood": "BigVirusBoi's Food Mod",
-  "itemGroup.unobtainable": "BigVirusBoi's Unobtainable Items",
+  "itemGroup.bobs_food": "BigVirusBoi's Food Mod",
+  "tooltip.bobs_food_mod.unobtainable": "§c§lThis item is unobtainable in survival!",
 
   "item.bobs_food_mod.honeyed_apple": "Honeyed Apple",
   "item.bobs_food_mod.diamond_apple": "Diamond Apple",
