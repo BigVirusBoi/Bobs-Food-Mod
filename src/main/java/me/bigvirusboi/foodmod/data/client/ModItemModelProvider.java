@@ -1,6 +1,7 @@
 package me.bigvirusboi.foodmod.data.client;
 
 import me.bigvirusboi.foodmod.FoodMod;
+import me.bigvirusboi.foodmod.init.ItemInit;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -15,7 +16,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        buildItem("honeyed_apple");
+        for (String name : ItemInit.NEEDS_MODELS) {
+            buildItem(name);
+        }
     }
 
 

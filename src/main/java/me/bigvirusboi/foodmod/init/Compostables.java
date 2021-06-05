@@ -11,5 +11,6 @@ public class Compostables {
 
     public static void registerCompostables() {
         register(ItemInit.HONEYED_APPLE, 0.75f);
+        register(ItemInit.CHOCOLATE, 0.5f);
     }
 }
