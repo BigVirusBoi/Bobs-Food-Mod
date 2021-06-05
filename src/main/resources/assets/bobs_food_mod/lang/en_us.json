@@ -1,8 +1,9 @@
 {
   "itemGroup.bobsFood": "BigVirusBoi's Food Mod",
-  "itemGroup.unobtainable": "BigVirusBoi's Unobtainable Food",
+  "itemGroup.unobtainable": "BigVirusBoi's Unobtainable Items",
 
   "item.bobs_food_mod.honeyed_apple": "Honeyed Apple",
+  "item.bobs_food_mod.diamond_apple": "Diamond Apple",
   
   "item.bobs_food_mod.chocolate": "Chocolate"
 }
