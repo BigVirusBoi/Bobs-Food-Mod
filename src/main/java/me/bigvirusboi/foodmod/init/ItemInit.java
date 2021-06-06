@@ -31,6 +31,7 @@ public class ItemInit {
     public static final RegistryObject<Item> BREAD_SLICE = registerUnobtainableFood("bread_slice", ModFoods.BREAD_SLICE);
     public static final RegistryObject<Item> FRIED_EGG = registerUnobtainableFood("fried_egg", ModFoods.FRIED_EGG);
     public static final RegistryObject<Item> TOMATO = registerUnobtainableFood("tomato", ModFoods.TOMATO);
+    public static final RegistryObject<Item> SALT = registerUnobtainable("salt");
 
     public static final RegistryObject<Item> ICE_CREAM_CONE = registerUnobtainableFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
     public static final RegistryObject<IceCreamItem> VANILLA_ICE_CREAM = registerUnobtainableIceCream("vanilla_ice_cream");
@@ -54,6 +55,12 @@ public class ItemInit {
 
     private static RegistryObject<Item> registerUnobtainableFood(String name, Food food) {
         Item item = new Item(new Item.Properties().food(food).group(FoodMod.GROUP));
+        UNOBTAINABLE.add(item);
+        return register(name, () -> item);
+    }
+
+    private static RegistryObject<Item> registerUnobtainable(String name) {
+        Item item = new Item(new Item.Properties().group(FoodMod.GROUP));
         UNOBTAINABLE.add(item);
         return register(name, () -> item);
     }
