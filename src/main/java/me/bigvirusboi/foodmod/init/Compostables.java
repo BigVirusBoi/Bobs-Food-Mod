@@ -15,5 +15,6 @@ public class Compostables {
         register(ItemInit.CHOCOLATE, 0.3f);
         register(ItemInit.ICE_CREAM_CONE, 0.1f);
         register(ItemInit.BANANA, 0.4f);
+        register(ItemInit.ORANGE, 0.6f);
     }
 }

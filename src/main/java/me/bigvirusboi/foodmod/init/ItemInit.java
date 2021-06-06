@@ -27,6 +27,8 @@ public class ItemInit {
     public static final RegistryObject<Item> BACON = registerUnobtainableFood("bacon", ModFoods.BACON);
     public static final RegistryObject<Item> COOKED_BACON = registerUnobtainableFood("cooked_bacon", ModFoods.COOKED_BACON);
     public static final RegistryObject<Item> BANANA = registerUnobtainableFood("banana", ModFoods.BANANA);
+    public static final RegistryObject<Item> ORANGE = registerUnobtainableFood("orange", ModFoods.ORANGE);
+
     public static final RegistryObject<Item> ICE_CREAM_CONE = registerUnobtainableFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
     public static final RegistryObject<IceCreamItem> VANILLA_ICE_CREAM = registerUnobtainableIceCream("vanilla_ice_cream");
     public static final RegistryObject<IceCreamItem> BANANA_ICE_CREAM = registerUnobtainableIceCream("banana_ice_cream");
