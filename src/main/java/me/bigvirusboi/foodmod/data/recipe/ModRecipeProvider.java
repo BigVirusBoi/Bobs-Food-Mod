@@ -38,6 +38,8 @@ public class ModRecipeProvider extends RecipeProvider {
         buildShapelessRecipe(ItemInit.BANANA_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
                 .addIngredient(ItemInit.BANANA.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
                 .build(consumer);
+        buildShapelessRecipe(ItemInit.FLOUR.get(), 4, Items.WHEAT).addIngredient(Items.WHEAT)
+                .build(consumer);
 
         // Meat
         buildMeatRecipes(ItemInit.BACON.get(), ItemInit.COOKED_BACON.get(), ItemInit.BACON.get(), consumer);
