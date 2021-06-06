@@ -1,11 +1,12 @@
 {
   "itemGroup.bobs_food": "BigVirusBoi's Food Mod",
-  "tooltip.bobs_food_mod.unobtainable": "§c§lThis item is currently unobtainable",
+  "tooltip.bobs_food_mod.unobtainable": "§cThis item is currently unobtainable",
 
   "item.bobs_food_mod.honeyed_apple": "Honeyed Apple",
   "item.bobs_food_mod.diamond_apple": "Diamond Apple",
   "item.bobs_food_mod.ice_cream": "Ice Cream",
-  
+  "item.bobs_food_mod.flour": "Flour",
+
   "item.bobs_food_mod.chocolate": "Chocolate",
   "item.bobs_food_mod.bacon": "Raw Bacon",
   "item.bobs_food_mod.cooked_bacon": "Cooked Bacon",
@@ -15,7 +16,7 @@
   "item.bobs_food_mod.fried_egg": "Fried Egg",
   "item.bobs_food_mod.tomato": "Tomato",
   "item.bobs_food_mod.salt": "Salt",
-  "item.bobs_food_mod.flour": "Flour",
+  "item.bobs_food_mod.butter": "Butter",
   
   "item.bobs_food_mod.ice_cream_cone": "Ice Cream Cone",
   "item.bobs_food_mod.vanilla_ice_cream": "Vanilla Ice Cream",
