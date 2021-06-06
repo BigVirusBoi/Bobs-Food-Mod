@@ -19,6 +19,7 @@ public class ModFoods {
     public static final Food BUTTER = simpleFood(0, 0.1F);
     public static final Food PINEAPPLE = simpleFood(7, 0.75F);
     public static final Food MANGO = simpleFood(5, 0.6F);
+    public static final Food LEMON = simpleFood(3, 0.2F);
 
     public static final Food BACON = meat(1, 0.2F);
     public static final Food COOKED_BACON = meat(3, 0.3F);
