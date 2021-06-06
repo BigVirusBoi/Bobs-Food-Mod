@@ -19,5 +19,6 @@ public class Compostables {
         register(ItemInit.BREAD_SLICE, 0.2f);
         register(ItemInit.TOMATO, 0.5f);
         register(ItemInit.PINEAPPLE, 0.8f);
+        register(ItemInit.MANGO, 0.5f);
     }
 }
