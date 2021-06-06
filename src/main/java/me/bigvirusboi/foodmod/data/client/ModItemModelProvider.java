@@ -9,6 +9,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemModelProvider extends ItemModelProvider {
     private final ModelFile ITEM_GENERATED = getExistingFile(mcLoc("item/generated"));
+    private final ModelFile ITEM_HANDHELD = getExistingFile(mcLoc("item/handheld"));
 
     public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, FoodMod.MOD_ID, existingFileHelper);
@@ -19,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         for (String name : ItemInit.NEEDS_MODELS) {
             buildItem(name);
         }
+        buildItem(ITEM_HANDHELD, "knife");
     }
 
 

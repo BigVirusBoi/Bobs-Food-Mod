@@ -25,6 +25,8 @@ import javax.annotation.Nonnull;
 @Mod(FoodMod.MOD_ID)
 @Mod.EventBusSubscriber(modid = FoodMod.MOD_ID)
 public class FoodMod {
+    // TODO villager trade bacon?
+    //  net.minecraft.entity.merchant.villager.VillagerTrades.java
     public static final String MOD_ID = "bobs_food_mod";
     public static final Logger LOGGER = LogManager.getLogger();
 

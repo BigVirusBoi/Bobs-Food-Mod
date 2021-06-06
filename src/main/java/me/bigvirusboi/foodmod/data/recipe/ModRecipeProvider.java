@@ -2,6 +2,7 @@ package me.bigvirusboi.foodmod.data.recipe;
 
 import me.bigvirusboi.foodmod.FoodMod;
 import me.bigvirusboi.foodmod.init.ItemInit;
+import net.minecraft.advancements.criterion.ItemPredicate;
 import net.minecraft.data.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -21,12 +22,19 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void registerRecipes(@Nonnull Consumer<IFinishedRecipe> consumer) {
+        buildShapedRecipe(ItemInit.KNIFE.get(), 1, Items.IRON_INGOT)
+                .key('S', Items.STICK).key('I', Items.IRON_INGOT)
+                .patternLine(" I")
+                .patternLine("S ").build(consumer);
         buildShapedRecipe(ItemInit.DIAMOND_APPLE.get(), 1, Items.DIAMOND)
                 .key('D', Items.DIAMOND).key('A', Items.GOLDEN_APPLE)
                 .patternLine(" D ")
                 .patternLine("DAD")
                 .patternLine(" D ").build(consumer);
 
+        buildShapelessRecipe(ItemInit.BACON.get(), 2, Items.PORKCHOP)
+                .addIngredient(Items.PORKCHOP).addIngredient(ItemInit.KNIFE.get())
+                .build(consumer);
         buildShapelessRecipe(ItemInit.HONEYED_APPLE.get(), 1, Items.HONEY_BOTTLE)
                 .addIngredient(Items.APPLE).addIngredient(Items.HONEY_BOTTLE).build(consumer);
         buildShapelessRecipe(ItemInit.ICE_CREAM.get(), 1, Items.MILK_BUCKET)

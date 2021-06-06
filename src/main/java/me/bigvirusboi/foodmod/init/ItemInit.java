@@ -2,6 +2,7 @@ package me.bigvirusboi.foodmod.init;
 
 import com.google.common.collect.Sets;
 import me.bigvirusboi.foodmod.FoodMod;
+import me.bigvirusboi.foodmod.item.KnifeItem;
 import me.bigvirusboi.foodmod.item.IceCreamItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -12,21 +13,23 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.Set;
 import java.util.function.Supplier;
 
-// TODO knife for cutting pork into bacon or something
-
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FoodMod.MOD_ID);
     public static final Set<String> NEEDS_MODELS = Sets.newHashSet();
     public static final Set<Item> UNOBTAINABLE = Sets.newHashSet();
 
+    // TODO currently only 1 use...
+    public static final RegistryObject<Item> KNIFE = registerNoModel("knife", () ->
+            new KnifeItem(new Item.Properties().group(FoodMod.GROUP).setNoRepair()
+                    .defaultMaxDamage(64).maxDamage(64)));
     public static final RegistryObject<Item> HONEYED_APPLE = registerFood("honeyed_apple", ModFoods.HONEYED_APPLE);
     public static final RegistryObject<Item> DIAMOND_APPLE = registerFood("diamond_apple", ModFoods.DIAMOND_APPLE);
     public static final RegistryObject<Item> ICE_CREAM = registerItem("ice_cream");
     public static final RegistryObject<Item> FLOUR = registerItem("flour");
+    public static final RegistryObject<Item> BACON = registerFood("bacon", ModFoods.BACON);
+    public static final RegistryObject<Item> COOKED_BACON = registerFood("cooked_bacon", ModFoods.COOKED_BACON);
     // Unobtainable (for now)
     public static final RegistryObject<Item> CHOCOLATE = registerUnobtainableFood("chocolate", ModFoods.CHOCOLATE);
-    public static final RegistryObject<Item> BACON = registerUnobtainableFood("bacon", ModFoods.BACON);
-    public static final RegistryObject<Item> COOKED_BACON = registerUnobtainableFood("cooked_bacon", ModFoods.COOKED_BACON);
     public static final RegistryObject<Item> BANANA = registerUnobtainableFood("banana", ModFoods.BANANA);
     public static final RegistryObject<Item> ORANGE = registerUnobtainableFood("orange", ModFoods.ORANGE);
     public static final RegistryObject<Item> BREAD_SLICE = registerUnobtainableFood("bread_slice", ModFoods.BREAD_SLICE);
@@ -47,6 +50,15 @@ public class ItemInit {
 
     private static RegistryObject<Item> register(String name, Supplier<? extends Item> item) {
         NEEDS_MODELS.add(name);
+        return ITEMS.register(name, item);
+    }
+
+    private static RegistryObject<Item> registerNoModel(String name) {
+        Item item = new Item(new Item.Properties().group(FoodMod.GROUP));
+        return registerNoModel(name, () -> item);
+    }
+
+    private static RegistryObject<Item> registerNoModel(String name, Supplier<? extends Item> item) {
         return ITEMS.register(name, item);
     }
 
