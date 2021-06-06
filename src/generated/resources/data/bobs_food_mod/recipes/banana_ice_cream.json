@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bobs_food_mod:banana"
+    },
+    {
+      "item": "bobs_food_mod:ice_cream"
+    },
+    {
+      "item": "bobs_food_mod:ice_cream_cone"
+    }
+  ],
+  "result": {
+    "item": "bobs_food_mod:banana_ice_cream"
+  }
+}

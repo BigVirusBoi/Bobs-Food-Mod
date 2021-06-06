@@ -26,6 +26,7 @@ public class ItemInit {
     public static final RegistryObject<Item> CHOCOLATE = registerUnobtainableFood("chocolate", ModFoods.CHOCOLATE);
     public static final RegistryObject<Item> BACON = registerUnobtainableFood("bacon", ModFoods.BACON);
     public static final RegistryObject<Item> COOKED_BACON = registerUnobtainableFood("cooked_bacon", ModFoods.COOKED_BACON);
+    public static final RegistryObject<Item> BANANA = registerUnobtainableFood("banana", ModFoods.BANANA);
     public static final RegistryObject<Item> ICE_CREAM_CONE = registerUnobtainableFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
     public static final RegistryObject<IceCreamItem> VANILLA_ICE_CREAM = registerUnobtainableIceCream("vanilla_ice_cream");
     public static final RegistryObject<IceCreamItem> BANANA_ICE_CREAM = registerUnobtainableIceCream("banana_ice_cream");
@@ -61,6 +62,7 @@ public class ItemInit {
     private static RegistryObject<IceCreamItem> registerUnobtainableIceCream(String name) {
         IceCreamItem item = new IceCreamItem(new Item.Properties().maxStackSize(1).group(FoodMod.GROUP));
         UNOBTAINABLE.add(item);
-        return registerIceCream(name);
+        NEEDS_MODELS.add(name);
+        return ITEMS.register(name, () -> item);
     }
 }

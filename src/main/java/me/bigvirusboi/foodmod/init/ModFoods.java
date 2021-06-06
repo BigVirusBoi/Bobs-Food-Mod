@@ -8,9 +8,10 @@ import net.minecraft.potion.Effects;
 import java.util.function.Supplier;
 
 public class ModFoods {
-    public static final Food HONEYED_APPLE = simpleFood(6, 5.6F);
+    public static final Food HONEYED_APPLE = simpleFood(6, 4.5F);
     public static final Food CHOCOLATE = simpleFood(2, 0.2F);
     public static final Food ICE_CREAM_CONE = simpleFood(1, 0F);
+    public static final Food BANANA = simpleFood(3, 0.5F);
 
     public static final Food BACON = meat(1, 0.2F);
     public static final Food COOKED_BACON = meat(3, 0.3F);
