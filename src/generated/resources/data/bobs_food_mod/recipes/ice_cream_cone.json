@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bobs_food_mod:flour"
+    },
+    {
+      "item": "bobs_food_mod:flour"
+    },
+    {
+      "item": "bobs_food_mod:salt"
+    },
+    {
+      "item": "bobs_food_mod:butter"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "bobs_food_mod:ice_cream_cone",
+    "count": 8
+  }
+}

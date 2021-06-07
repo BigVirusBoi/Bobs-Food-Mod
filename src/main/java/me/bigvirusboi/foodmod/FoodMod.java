@@ -3,12 +3,12 @@ package me.bigvirusboi.foodmod;
 import me.bigvirusboi.foodmod.client.ClientEventBus;
 import me.bigvirusboi.foodmod.init.Compostables;
 import me.bigvirusboi.foodmod.init.ItemInit;
+import me.bigvirusboi.foodmod.init.SoundInit;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -34,6 +34,7 @@ public class FoodMod {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::commonSetup);
 
+        SoundInit.SOUNDS.register(bus);
         ItemInit.ITEMS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);

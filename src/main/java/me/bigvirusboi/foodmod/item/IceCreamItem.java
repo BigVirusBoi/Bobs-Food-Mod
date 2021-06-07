@@ -1,6 +1,7 @@
 package me.bigvirusboi.foodmod.item;
 
 import me.bigvirusboi.foodmod.init.ItemInit;
+import me.bigvirusboi.foodmod.init.SoundInit;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,6 +13,7 @@ import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.DrinkHelper;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
 public class IceCreamItem extends Item {
@@ -55,18 +57,21 @@ public class IceCreamItem extends Item {
         return 32;
     }
 
+    @Override
+    public SoundEvent getDrinkSound() {
+        return SoundInit.ICE_CREAM_LICK.get();
+    }
+
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         return DrinkHelper.startDrinking(worldIn, playerIn, handIn);
     }
 
-
-
     // TODO ?
     public enum Type {
-        VANILLA,
-
         BANANA,
         CHOCOLATE,
+
+        VANILLA,
         LEMON,
         MELON,
         STRAWBERRY,

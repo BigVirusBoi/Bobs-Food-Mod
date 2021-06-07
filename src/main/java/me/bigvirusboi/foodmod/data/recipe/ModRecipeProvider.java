@@ -32,20 +32,27 @@ public class ModRecipeProvider extends RecipeProvider {
                 .patternLine("DAD")
                 .patternLine(" D ").build(consumer);
 
+        buildShapelessRecipe(ItemInit.ICE_CREAM.get(), 1, Items.MILK_BUCKET)
+                .addIngredient(Items.MILK_BUCKET).addIngredient(Items.SNOWBALL).addIngredient(Items.SUGAR)
+                .build(consumer);
+        // Criterion stupid
+        buildShapelessRecipe(ItemInit.ICE_CREAM_CONE.get(), 8, ItemInit.FLOUR.get())
+                .addIngredient(ItemInit.FLOUR.get(), 2).addIngredient(ItemInit.SALT.get())
+                .addIngredient(ItemInit.BUTTER.get()).addIngredient(Items.MILK_BUCKET)
+                .addIngredient(Items.EGG).addIngredient(Items.SUGAR)
+                .build(consumer);
+        buildShapelessRecipe(ItemInit.BANANA_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
+                .addIngredient(ItemInit.BANANA.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .build(consumer);
+        buildShapelessRecipe(ItemInit.CHOCOLATE_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
+                .addIngredient(ItemInit.CHOCOLATE.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .build(consumer);
+
         buildShapelessRecipe(ItemInit.BACON.get(), 2, Items.PORKCHOP)
                 .addIngredient(Items.PORKCHOP).addIngredient(ItemInit.KNIFE.get())
                 .build(consumer);
         buildShapelessRecipe(ItemInit.HONEYED_APPLE.get(), 1, Items.HONEY_BOTTLE)
                 .addIngredient(Items.APPLE).addIngredient(Items.HONEY_BOTTLE).build(consumer);
-        buildShapelessRecipe(ItemInit.ICE_CREAM.get(), 1, Items.MILK_BUCKET)
-                .addIngredient(Items.MILK_BUCKET).addIngredient(Items.SNOWBALL).addIngredient(Items.SUGAR)
-                .build(consumer);
-        buildShapelessRecipe(ItemInit.CHOCOLATE_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
-                .addIngredient(ItemInit.CHOCOLATE.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
-                .build(consumer);
-        buildShapelessRecipe(ItemInit.BANANA_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
-                .addIngredient(ItemInit.BANANA.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
-                .build(consumer);
         buildShapelessRecipe(ItemInit.FLOUR.get(), 4, Items.WHEAT).addIngredient(Items.WHEAT)
                 .build(consumer);
 

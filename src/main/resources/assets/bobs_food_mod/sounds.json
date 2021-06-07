@@ -1,0 +1,12 @@
+{
+  "item.ice_cream.lick": {
+    "category": "players",
+    "subtitle": "item.ice_cream.lick",
+    "sounds": [
+      {
+        "name": "bobs_food_mod:item/ice_cream/lick",
+        "stream": true
+      }
+    ]
+  }
+}
