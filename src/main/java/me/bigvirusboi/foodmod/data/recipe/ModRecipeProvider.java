@@ -49,6 +49,15 @@ public class ModRecipeProvider extends RecipeProvider {
         buildShapelessRecipe(ItemInit.CHOCOLATE_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
                 .addIngredient(ItemInit.CHOCOLATE.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
                 .build(consumer);
+        buildShapelessRecipe(ItemInit.LEMON_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
+                .addIngredient(ItemInit.LEMON.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .build(consumer);
+        buildShapelessRecipe(ItemInit.MANGO_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
+                .addIngredient(ItemInit.MANGO.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .build(consumer);
+        buildShapelessRecipe(ItemInit.STRAWBERRY_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
+                .addIngredient(ItemInit.STRAWBERRY.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .build(consumer);
 
         buildShapelessRecipe(ItemInit.BACON.get(), 2, Items.PORKCHOP)
                 .addIngredient(Items.PORKCHOP).addIngredient(ItemInit.KNIFE.get())
