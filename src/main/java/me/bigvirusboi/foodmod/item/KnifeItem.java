@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 
 public class KnifeItem extends SwordItem implements IVanishable {
     public KnifeItem(Properties properties) {
-        super(ItemTier.IRON, 3, -2, properties);
+        super(ItemTier.IRON, 1, -2, properties);
     }
 
     public boolean canPlayerBreakBlockWhileHolding(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
