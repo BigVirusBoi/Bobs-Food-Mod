@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "bobs_food_mod:salt"
+    }
+  ],
+  "result": {
+    "item": "bobs_food_mod:butter"
+  }
+}

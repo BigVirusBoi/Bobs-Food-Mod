@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:water_bucket"
+  },
+  "result": "bobs_food_mod:salt",
+  "experience": 0.0,
+  "cookingtime": 50
+}

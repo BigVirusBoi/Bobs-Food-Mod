@@ -35,7 +35,9 @@ public class ModRecipeProvider extends RecipeProvider {
         buildShapelessRecipe(ItemInit.ICE_CREAM.get(), 1, Items.MILK_BUCKET)
                 .addIngredient(Items.MILK_BUCKET).addIngredient(Items.SNOWBALL).addIngredient(Items.SUGAR)
                 .build(consumer);
-        // Criterion stupid
+        buildShapelessRecipe(ItemInit.BUTTER.get(), 1, Items.MILK_BUCKET)
+                .addIngredient(Items.MILK_BUCKET).addIngredient(Items.MILK_BUCKET).addIngredient(ItemInit.SALT.get())
+                .build(consumer);
         buildShapelessRecipe(ItemInit.ICE_CREAM_CONE.get(), 8, ItemInit.FLOUR.get())
                 .addIngredient(ItemInit.FLOUR.get(), 2).addIngredient(ItemInit.SALT.get())
                 .addIngredient(ItemInit.BUTTER.get()).addIngredient(Items.MILK_BUCKET)
@@ -55,6 +57,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .addIngredient(Items.APPLE).addIngredient(Items.HONEY_BOTTLE).build(consumer);
         buildShapelessRecipe(ItemInit.FLOUR.get(), 4, Items.WHEAT).addIngredient(Items.WHEAT)
                 .build(consumer);
+
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(Items.WATER_BUCKET), ItemInit.SALT.get(), 0, 50)
+                .addCriterion("has_item", hasItem(Items.WATER_BUCKET)).build(consumer);
 
         // Meat
         buildMeatRecipes(ItemInit.BACON.get(), ItemInit.COOKED_BACON.get(), ItemInit.BACON.get(), consumer);

@@ -28,8 +28,12 @@ public class ItemInit {
     public static final RegistryObject<Item> FLOUR = registerItem("flour");
     public static final RegistryObject<Item> BACON = registerFood("bacon", ModFoods.BACON);
     public static final RegistryObject<Item> COOKED_BACON = registerFood("cooked_bacon", ModFoods.COOKED_BACON);
+    // TODO change pls
+    public static final RegistryObject<Item> SALT = registerItem("salt");
+    // TODO change pls
+    public static final RegistryObject<Item> BUTTER = registerFood("butter", ModFoods.BUTTER);
 
-    public static final RegistryObject<Item> ICE_CREAM_CONE = registerUnobtainableFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
+    public static final RegistryObject<Item> ICE_CREAM_CONE = registerFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
     public static final RegistryObject<IceCreamItem> BANANA_ICE_CREAM = registerUnobtainableIceCream("banana_ice_cream");
     public static final RegistryObject<IceCreamItem> CHOCOLATE_ICE_CREAM = registerUnobtainableIceCream("chocolate_ice_cream");
     public static final RegistryObject<IceCreamItem> VANILLA_ICE_CREAM = registerUnobtainableIceCream("vanilla_ice_cream");
@@ -40,8 +44,6 @@ public class ItemInit {
     public static final RegistryObject<Item> BREAD_SLICE = registerUnobtainableFood("bread_slice", ModFoods.BREAD_SLICE);
     public static final RegistryObject<Item> FRIED_EGG = registerUnobtainableFood("fried_egg", ModFoods.FRIED_EGG);
     public static final RegistryObject<Item> TOMATO = registerUnobtainableFood("tomato", ModFoods.TOMATO);
-    public static final RegistryObject<Item> SALT = registerUnobtainable("salt");
-    public static final RegistryObject<Item> BUTTER = registerUnobtainableFood("butter", ModFoods.BUTTER);
     public static final RegistryObject<Item> PINEAPPLE = registerUnobtainableFood("pineapple", ModFoods.PINEAPPLE);
     public static final RegistryObject<Item> MANGO = registerUnobtainableFood("mango", ModFoods.MANGO);
     public static final RegistryObject<Item> LEMON = registerUnobtainableFood("lemon", ModFoods.LEMON);
