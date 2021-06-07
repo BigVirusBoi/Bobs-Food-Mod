@@ -70,11 +70,12 @@ public class IceCreamItem extends Item {
     public enum Type {
         BANANA,
         CHOCOLATE,
-
-        VANILLA,
         LEMON,
-        MELON,
+        MANGO,
         STRAWBERRY,
+        VANILLA,
+
+        MELON,
         ;
     }
 }
