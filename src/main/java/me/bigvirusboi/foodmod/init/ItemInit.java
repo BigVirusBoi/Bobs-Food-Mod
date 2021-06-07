@@ -73,14 +73,14 @@ public class ItemInit {
         return register(name, () -> item);
     }
 
-    private static RegistryObject<Item> registerUnobtainableFood(String name, Food food) {
-        Item item = new Item(new Item.Properties().food(food).group(FoodMod.GROUP));
+    private static RegistryObject<Item> registerUnobtainable(String name) {
+        Item item = new Item(new Item.Properties().group(FoodMod.UNOBTAINABLE));
         UNOBTAINABLE.add(item);
         return register(name, () -> item);
     }
 
-    private static RegistryObject<Item> registerUnobtainable(String name) {
-        Item item = new Item(new Item.Properties().group(FoodMod.GROUP));
+    private static RegistryObject<Item> registerUnobtainableFood(String name, Food food) {
+        Item item = new Item(new Item.Properties().food(food).group(FoodMod.UNOBTAINABLE));
         UNOBTAINABLE.add(item);
         return register(name, () -> item);
     }
@@ -92,7 +92,7 @@ public class ItemInit {
     }
 
     private static RegistryObject<IceCreamItem> registerUnobtainableIceCream(String name) {
-        IceCreamItem item = new IceCreamItem(new Item.Properties().maxStackSize(1).group(FoodMod.GROUP));
+        IceCreamItem item = new IceCreamItem(new Item.Properties().maxStackSize(1).group(FoodMod.UNOBTAINABLE));
         UNOBTAINABLE.add(item);
         NEEDS_MODELS.add(name);
         return ITEMS.register(name, () -> item);

@@ -56,6 +56,7 @@ public class FoodMod {
 
 
     public static final FoodItemGroup GROUP = FoodItemGroup.instance;
+    public static final UnobtainableItemGroup UNOBTAINABLE = UnobtainableItemGroup.instance;
 
     private static class FoodItemGroup extends ItemGroup {
         public static final FoodItemGroup instance = new FoodItemGroup(ItemGroup.GROUPS.length, "bobs_food");
@@ -68,6 +69,20 @@ public class FoodMod {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ItemInit.HONEYED_APPLE.get());
+        }
+    }
+
+    private static class UnobtainableItemGroup extends ItemGroup {
+        public static final UnobtainableItemGroup instance = new UnobtainableItemGroup(ItemGroup.GROUPS.length, "bobs_food");
+
+        private UnobtainableItemGroup(int index, String label) {
+            super(index, label);
+        }
+
+        @Nonnull
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ItemInit.CHOCOLATE.get());
         }
     }
 
