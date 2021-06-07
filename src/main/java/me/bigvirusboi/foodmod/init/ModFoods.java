@@ -22,6 +22,7 @@ public class ModFoods {
     public static final Food LEMON = simpleFood(3, 0.2F);
     public static final Food LIME = simpleFood(3, 0.2F);
     public static final Food STRAWBERRY = simpleFood(2, 0.2F);
+    public static final Food CHILI = simpleFood(2, 0.2F);
 
     public static final Food BACON = meat(1, 0.2F);
     public static final Food COOKED_BACON = meat(3, 0.3F);
