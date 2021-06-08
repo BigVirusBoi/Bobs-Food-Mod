@@ -10,7 +10,7 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle'
 
-group = 'me.bigvirusboi.bobs_food_mod'
+group = 'me.bigvirusboi.foodmod'
 version =  "mc${minecraft_version}-v${mod_version}"
 archivesBaseName = 'BobsFoodMod'
 
