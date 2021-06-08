@@ -7,11 +7,22 @@ issueTrackerURL="https://github.com/BigVirusBoi/Bobs-Food-Mod/issues"
 modId = "bobs_food_mod"
 version = "${file.jarVersion}"
 displayName = "Bob's Food Mod"
-#updateJSONURL="http://myurl.me/"
-#displayURL="http://example.com/"
-#logoFile="logo.png"
-credits="BigVirusBoi"
+#updateJSONURL=""
+#displayURL=""
+logoFile="logo.png"
 authors = "BigVirusBoi"
-description = '''
+description = '''This mod adds new food'''
 
-'''
+[[dependencies.bobs_food_mod]]
+modId="forge"
+mandatory=true
+versionRange="[36.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.bobs_food_mod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.5,1.17)"
+ordering="NONE"
+side="BOTH"
