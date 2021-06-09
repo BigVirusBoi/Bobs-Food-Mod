@@ -1,6 +1,7 @@
 package me.bigvirusboi.foodmod;
 
 import me.bigvirusboi.foodmod.client.ClientEventBus;
+import me.bigvirusboi.foodmod.init.BlockInit;
 import me.bigvirusboi.foodmod.init.Compostables;
 import me.bigvirusboi.foodmod.init.ItemInit;
 import me.bigvirusboi.foodmod.init.SoundInit;
@@ -36,6 +37,7 @@ public class FoodMod {
 
         SoundInit.SOUNDS.register(bus);
         ItemInit.ITEMS.register(bus);
+        BlockInit.BLOCKS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ClientEventBus::clientSetup);
