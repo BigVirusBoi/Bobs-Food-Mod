@@ -22,5 +22,8 @@ public class Compostables {
         register(ItemInit.MANGO, 0.5f);
         register(ItemInit.LEMON, 0.3f);
         register(ItemInit.LIME, 0.3f);
+        register(ItemInit.FRIED_EGG, 0.2f);
+        register(ItemInit.CHILI, 0.2f);
+        register(ItemInit.CUCUMBER, 0.4f);
     }
 }

@@ -2,8 +2,11 @@ package me.bigvirusboi.foodmod.init;
 
 import com.google.common.collect.Sets;
 import me.bigvirusboi.foodmod.FoodMod;
+import me.bigvirusboi.foodmod.block.StrawberriesBlock;
 import me.bigvirusboi.foodmod.item.KnifeItem;
 import me.bigvirusboi.foodmod.item.IceCreamItem;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -52,9 +55,12 @@ public class ItemInit {
     public static final RegistryObject<Item> LEMON = registerUnobtainableFood("lemon", ModFoods.LEMON);
     public static final RegistryObject<Item> LIME = registerUnobtainableFood("lime", ModFoods.LIME);
     public static final RegistryObject<Item> COCONUT = registerUnobtainable("coconut");
-    public static final RegistryObject<Item> STRAWBERRY = registerUnobtainableFood("strawberry", ModFoods.STRAWBERRY);
     public static final RegistryObject<Item> CHILI = registerUnobtainableFood("chili", ModFoods.CHILI);
     public static final RegistryObject<Item> CUCUMBER = registerUnobtainableFood("cucumber", ModFoods.CUCUMBER);
+
+    public static final RegistryObject<Item> STRAWBERRY = register("strawberry", () ->
+            new BlockNamedItem(BlockInit.STRAWBERRIES.get(), new Item.Properties().group(FoodMod.UNOBTAINABLE)
+                    .food(ModFoods.STRAWBERRY)));
 
     private static RegistryObject<Item> register(String name, Supplier<? extends Item> item) {
         NEEDS_MODELS.add(name);
