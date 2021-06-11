@@ -60,7 +60,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .addIngredient(ItemInit.MANGO.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
                 .build(consumer);
         buildShapelessRecipe(ItemInit.STRAWBERRY_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
-                .addIngredient(ItemInit.STRAWBERRY.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .addIngredient(ItemInit.STRAWBERRY_SEEDS.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
                 .build(consumer);
 
         buildShapelessRecipe(ItemInit.BACON.get(), 2, Items.PORKCHOP)
@@ -74,6 +74,8 @@ public class ModRecipeProvider extends RecipeProvider {
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(Items.WATER_BUCKET), ItemInit.SALT.get(), 0, 50)
                 .addCriterion("has_item", hasItem(Items.WATER_BUCKET)).build(consumer);
 
+        buildSingleItemRecipe(ItemInit.STRAWBERRY_SEEDS.get(), ItemInit.STRAWBERRY.get()).build(consumer);
+
         // Meat
         buildMeatRecipes(ItemInit.BACON.get(), ItemInit.COOKED_BACON.get(), ItemInit.BACON.get(), consumer);
     }
@@ -86,6 +88,14 @@ public class ModRecipeProvider extends RecipeProvider {
 
     private ShapelessRecipeBuilder buildShapelessRecipe(Item result, int count, Item criterion) {
         return ShapelessRecipeBuilder.shapelessRecipe(result, count).addCriterion("has_item", hasItem(criterion));
+    }
+
+    private ShapelessRecipeBuilder buildSingleItemRecipe(Item result, Item item) {
+        return buildSingleItemRecipe(result, 1, item);
+    }
+
+    private ShapelessRecipeBuilder buildSingleItemRecipe(Item result, int count, Item item) {
+        return ShapelessRecipeBuilder.shapelessRecipe(result, count).addIngredient(item).addCriterion("has_item", hasItem(item));
     }
 
     @SuppressWarnings("deprecation")

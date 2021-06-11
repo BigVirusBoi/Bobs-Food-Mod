@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"age=0": {
+			"model": "bobs_food_mod:block/strawberries_stage0"
+		},
+		"age=1": {
+			"model": "bobs_food_mod:block/strawberries_stage1"
+		},
+		"age=2": {
+			"model": "bobs_food_mod:block/strawberries_stage2"
+		},
+		"age=3": {
+			"model": "bobs_food_mod:block/strawberries_stage3"
+		}
+	}
+}

@@ -16,8 +16,8 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FoodMod.MOD_ID);
 
     public static final RegistryObject<Block> STRAWBERRIES = register("strawberries", () ->
-            new StrawberriesBlock(AbstractBlock.Properties.create(Material.PLANTS).sound(SoundType.PLANT)
-                    .doesNotBlockMovement().tickRandomly()));
+            new StrawberriesBlock(AbstractBlock.Properties.create(Material.PLANTS)
+                    .doesNotBlockMovement().tickRandomly().notSolid().sound(SoundType.CROP)));
 
     private static RegistryObject<Block> register(String name, Supplier<? extends Block> block) {
         return BLOCKS.register(name, block);

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bobs_food_mod:strawberry"
+    }
+  ],
+  "result": {
+    "item": "bobs_food_mod:strawberry_seeds"
+  }
+}

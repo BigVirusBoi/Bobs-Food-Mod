@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/crop",
+	"textures": {
+		"crop": "bobs_food_mod:block/strawberries_stage0"
+	}
+}

@@ -2,10 +2,8 @@ package me.bigvirusboi.foodmod.init;
 
 import com.google.common.collect.Sets;
 import me.bigvirusboi.foodmod.FoodMod;
-import me.bigvirusboi.foodmod.block.StrawberriesBlock;
 import me.bigvirusboi.foodmod.item.KnifeItem;
 import me.bigvirusboi.foodmod.item.IceCreamItem;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -43,6 +41,11 @@ public class ItemInit {
     public static final RegistryObject<IceCreamItem> MANGO_ICE_CREAM = registerUnobtainableIceCream("mango_ice_cream");
     public static final RegistryObject<IceCreamItem> STRAWBERRY_ICE_CREAM = registerUnobtainableIceCream("strawberry_ice_cream");
     public static final RegistryObject<IceCreamItem> VANILLA_ICE_CREAM = registerUnobtainableIceCream("vanilla_ice_cream");
+
+    public static final RegistryObject<Item> STRAWBERRY = registerFood("strawberry", ModFoods.STRAWBERRY);
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = register("strawberry_seeds", () ->
+            new BlockNamedItem(BlockInit.STRAWBERRIES.get(), new Item.Properties().group(FoodMod.GROUP)));
+
     // Unobtainable (for now)
     public static final RegistryObject<Item> CHOCOLATE = registerUnobtainableFood("chocolate", ModFoods.CHOCOLATE);
     public static final RegistryObject<Item> BANANA = registerUnobtainableFood("banana", ModFoods.BANANA);
@@ -57,10 +60,6 @@ public class ItemInit {
     public static final RegistryObject<Item> COCONUT = registerUnobtainable("coconut");
     public static final RegistryObject<Item> CHILI = registerUnobtainableFood("chili", ModFoods.CHILI);
     public static final RegistryObject<Item> CUCUMBER = registerUnobtainableFood("cucumber", ModFoods.CUCUMBER);
-
-    public static final RegistryObject<Item> STRAWBERRY = register("strawberry", () ->
-            new BlockNamedItem(BlockInit.STRAWBERRIES.get(), new Item.Properties().group(FoodMod.UNOBTAINABLE)
-                    .food(ModFoods.STRAWBERRY)));
 
     private static RegistryObject<Item> register(String name, Supplier<? extends Item> item) {
         NEEDS_MODELS.add(name);

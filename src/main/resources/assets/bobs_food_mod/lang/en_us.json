@@ -19,6 +19,8 @@
   "item.bobs_food_mod.strawberry_ice_cream": "Strawberry Ice Cream",
   "item.bobs_food_mod.vanilla_ice_cream": "Vanilla Ice Cream",
   
+  "item.bobs_food_mod.strawberry": "Strawberry",
+  "item.bobs_food_mod.strawberry_seeds": "Strawberry Seeds",
   "item.bobs_food_mod.chocolate": "Chocolate",
   "item.bobs_food_mod.bacon": "Raw Bacon",
   "item.bobs_food_mod.cooked_bacon": "Cooked Bacon",
@@ -32,7 +34,6 @@
   "item.bobs_food_mod.lemon": "Lemon",
   "item.bobs_food_mod.lime": "Lime",
   "item.bobs_food_mod.coconut": "Coconut",
-  "item.bobs_food_mod.strawberry": "Strawberry",
   "item.bobs_food_mod.chili": "Chili",
   "item.bobs_food_mod.cucumber": "Cucumber",
   "": ""
