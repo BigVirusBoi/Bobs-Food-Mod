@@ -65,17 +65,4 @@ public class IceCreamItem extends Item {
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         return DrinkHelper.startDrinking(worldIn, playerIn, handIn);
     }
-
-    // TODO ?
-    public enum Type {
-        BANANA,
-        CHOCOLATE,
-        LEMON,
-        MANGO,
-        STRAWBERRY,
-        VANILLA,
-
-        MELON,
-        ;
-    }
 }

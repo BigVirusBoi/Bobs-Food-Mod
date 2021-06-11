@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "bobs_food_mod:strawberry_seeds"
+      "item": "bobs_food_mod:strawberry"
     },
     {
       "item": "bobs_food_mod:ice_cream"
