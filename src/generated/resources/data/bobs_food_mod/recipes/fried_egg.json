@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:egg"
+  },
+  "result": "bobs_food_mod:fried_egg",
+  "experience": 0.0,
+  "cookingtime": 100
+}

@@ -74,6 +74,8 @@ public class ModRecipeProvider extends RecipeProvider {
         buildShapelessRecipe(ItemInit.FLOUR.get(), 4, Items.WHEAT).addIngredient(Items.WHEAT)
                 .build(consumer);
 
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(Items.EGG), ItemInit.FRIED_EGG.get(), 0, 100)
+                .addCriterion("has_item", hasItem(Items.EGG)).build(consumer);
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(Items.WATER_BUCKET), ItemInit.SALT.get(), 0, 50)
                 .addCriterion("has_item", hasItem(Items.WATER_BUCKET)).build(consumer);
 
