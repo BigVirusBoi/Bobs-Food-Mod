@@ -59,7 +59,7 @@ public abstract class AbstractCropsBlock extends CropsBlock {
         int i = state.get(this.getAgeProperty());
 
         if (i == this.getMaxAge()) {
-            int j = 1 + worldIn.rand.nextInt(2);
+            int j = 3 + worldIn.rand.nextInt(3);
             spawnAsEntity(worldIn, pos, new ItemStack(getPlantItem(), j));
             worldIn.playSound(null, pos, SoundEvents.ITEM_CROP_PLANT, SoundCategory.BLOCKS, 1.0F, 0.8F + worldIn.rand.nextFloat() * 0.4F);
             worldIn.setBlockState(pos, state.with(AGE, 0), 2);
