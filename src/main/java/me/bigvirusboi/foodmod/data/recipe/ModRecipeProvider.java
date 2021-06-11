@@ -36,11 +36,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .patternLine("DAD")
                 .patternLine(" D ").build(consumer);
 
-        buildShapelessRecipe(ItemInit.ICE_CREAM.get(), 1, Items.MILK_BUCKET)
-                .addIngredient(Items.MILK_BUCKET).addIngredient(Items.SNOWBALL).addIngredient(Items.SUGAR)
-                .build(consumer);
         buildShapelessRecipe(ItemInit.BUTTER.get(), 1, Items.MILK_BUCKET)
                 .addIngredient(Items.MILK_BUCKET).addIngredient(Items.MILK_BUCKET).addIngredient(ItemInit.SALT.get())
+                .build(consumer);
+        buildShapelessRecipe(ItemInit.ICE_CREAM.get(), 1, Items.MILK_BUCKET)
+                .addIngredient(Items.MILK_BUCKET).addIngredient(Items.SNOWBALL).addIngredient(Items.SUGAR)
                 .build(consumer);
         buildShapelessRecipe(ItemInit.ICE_CREAM_CONE.get(), 8, ItemInit.FLOUR.get())
                 .addIngredient(ItemInit.FLOUR.get(), 2).addIngredient(ItemInit.SALT.get())
@@ -60,11 +60,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 .addIngredient(ItemInit.MANGO.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
                 .build(consumer);
         buildShapelessRecipe(ItemInit.STRAWBERRY_ICE_CREAM.get(), 1, ItemInit.ICE_CREAM.get())
-                .addIngredient(ItemInit.STRAWBERRY_SEEDS.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
+                .addIngredient(ItemInit.STRAWBERRY.get()).addIngredient(ItemInit.ICE_CREAM.get()).addIngredient(ItemInit.ICE_CREAM_CONE.get())
                 .build(consumer);
 
         buildShapelessRecipe(ItemInit.BACON.get(), 2, Items.PORKCHOP)
                 .addIngredient(Items.PORKCHOP).addIngredient(ItemInit.KNIFE.get())
+                .build(consumer);
+        buildShapelessRecipe(ItemInit.BREAD_SLICE.get(), 4, Items.BREAD)
+                .addIngredient(Items.BREAD).addIngredient(ItemInit.KNIFE.get())
                 .build(consumer);
         buildShapelessRecipe(ItemInit.HONEYED_APPLE.get(), 1, Items.HONEY_BOTTLE)
                 .addIngredient(Items.APPLE).addIngredient(Items.HONEY_BOTTLE).build(consumer);

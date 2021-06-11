@@ -29,17 +29,16 @@ public class ItemInit {
     public static final RegistryObject<Item> FLOUR = registerItem("flour");
     public static final RegistryObject<Item> BACON = registerFood("bacon", ModFoods.BACON);
     public static final RegistryObject<Item> COOKED_BACON = registerFood("cooked_bacon", ModFoods.COOKED_BACON);
-    // TODO change pls
+    public static final RegistryObject<Item> BREAD_SLICE = registerFood("bread_slice", ModFoods.BREAD_SLICE);
     public static final RegistryObject<Item> SALT = registerItem("salt");
-    // TODO change pls
     public static final RegistryObject<Item> BUTTER = registerFood("butter", ModFoods.BUTTER);
 
     public static final RegistryObject<Item> ICE_CREAM_CONE = registerFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
+    public static final RegistryObject<IceCreamItem> STRAWBERRY_ICE_CREAM = registerIceCream("strawberry_ice_cream");
     public static final RegistryObject<IceCreamItem> BANANA_ICE_CREAM = registerUnobtainableIceCream("banana_ice_cream");
     public static final RegistryObject<IceCreamItem> CHOCOLATE_ICE_CREAM = registerUnobtainableIceCream("chocolate_ice_cream");
     public static final RegistryObject<IceCreamItem> LEMON_ICE_CREAM = registerUnobtainableIceCream("lemon_ice_cream");
     public static final RegistryObject<IceCreamItem> MANGO_ICE_CREAM = registerUnobtainableIceCream("mango_ice_cream");
-    public static final RegistryObject<IceCreamItem> STRAWBERRY_ICE_CREAM = registerUnobtainableIceCream("strawberry_ice_cream");
     public static final RegistryObject<IceCreamItem> VANILLA_ICE_CREAM = registerUnobtainableIceCream("vanilla_ice_cream");
 
     public static final RegistryObject<Item> STRAWBERRY = registerFood("strawberry", ModFoods.STRAWBERRY);
@@ -50,7 +49,6 @@ public class ItemInit {
     public static final RegistryObject<Item> CHOCOLATE = registerUnobtainableFood("chocolate", ModFoods.CHOCOLATE);
     public static final RegistryObject<Item> BANANA = registerUnobtainableFood("banana", ModFoods.BANANA);
     public static final RegistryObject<Item> ORANGE = registerUnobtainableFood("orange", ModFoods.ORANGE);
-    public static final RegistryObject<Item> BREAD_SLICE = registerUnobtainableFood("bread_slice", ModFoods.BREAD_SLICE);
     public static final RegistryObject<Item> FRIED_EGG = registerUnobtainableFood("fried_egg", ModFoods.FRIED_EGG);
     public static final RegistryObject<Item> TOMATO = registerUnobtainableFood("tomato", ModFoods.TOMATO);
     public static final RegistryObject<Item> PINEAPPLE = registerUnobtainableFood("pineapple", ModFoods.PINEAPPLE);
