@@ -5,6 +5,7 @@ import me.bigvirusboi.foodmod.init.BlockInit;
 import me.bigvirusboi.foodmod.init.Compostables;
 import me.bigvirusboi.foodmod.init.ItemInit;
 import me.bigvirusboi.foodmod.init.SoundInit;
+import me.bigvirusboi.foodmod.world.gen.BiomeFeatures;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -13,6 +14,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -36,6 +38,8 @@ public class FoodMod {
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(ClientEventBus::clientSetup);
+
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BiomeFeatures::generateFeatures);
     }
 
     private void commonSetup(final FMLCommonSetupEvent e) {

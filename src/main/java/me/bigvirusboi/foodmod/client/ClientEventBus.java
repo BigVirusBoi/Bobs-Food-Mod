@@ -15,6 +15,7 @@ import static me.bigvirusboi.foodmod.init.BlockInit.*;
 public class ClientEventBus {
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent e) {
+        RenderTypeLookup.setRenderLayer(GRASS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(STRAWBERRIES.get(), RenderType.getCutout());
     }
 }

@@ -2,6 +2,9 @@
   "itemGroup.bobs_food": "BigVirusBoi's Food Mod",
   "subtitles.item.ice_cream.lick": "Ice Cream Licked",
   "tooltip.bobs_food_mod.unobtainable": "§cThis item is currently unobtainable",
+  
+  "block.bobs_food_mod.grass": "Grass",
+  "block.bobs_food_mod.strawberries": "Strawberries",
 
   "item.bobs_food_mod.knife": "Knife",
   "item.bobs_food_mod.honeyed_apple": "Honeyed Apple",
@@ -35,6 +38,5 @@
   "item.bobs_food_mod.lime": "Lime",
   "item.bobs_food_mod.coconut": "Coconut",
   "item.bobs_food_mod.chili": "Chili",
-  "item.bobs_food_mod.cucumber": "Cucumber",
-  "": ""
+  "item.bobs_food_mod.cucumber": "Cucumber"
 }

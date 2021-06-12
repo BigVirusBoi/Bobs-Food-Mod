@@ -4,6 +4,8 @@ import com.google.common.collect.Sets;
 import me.bigvirusboi.foodmod.FoodMod;
 import me.bigvirusboi.foodmod.item.KnifeItem;
 import me.bigvirusboi.foodmod.item.IceCreamItem;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -23,6 +25,9 @@ public class ItemInit {
     public static final RegistryObject<Item> KNIFE = registerNoModel("knife", () ->
             new KnifeItem(new Item.Properties().group(FoodMod.GROUP).setNoRepair()
                     .defaultMaxDamage(64).maxDamage(64)));
+
+    public static final RegistryObject<Item> GRASS = ITEMS.register("grass", () ->
+            new BlockItem(BlockInit.GRASS.get(), new Item.Properties().group(FoodMod.GROUP)));
 
     public static final RegistryObject<Item> HONEYED_APPLE = registerFood("honeyed_apple", ModFoods.HONEYED_APPLE);
     public static final RegistryObject<Item> DIAMOND_APPLE = registerFood("diamond_apple", ModFoods.DIAMOND_APPLE);
@@ -63,6 +68,10 @@ public class ItemInit {
     private static RegistryObject<Item> register(String name, Supplier<? extends Item> item) {
         NEEDS_MODELS.add(name);
         return ITEMS.register(name, item);
+    }
+
+    private static RegistryObject<Item> registerBlockItem(String name, Block block) {
+        return register(name, () -> new BlockItem(block, new Item.Properties().group(FoodMod.GROUP)));
     }
 
     private static RegistryObject<Item> registerNoModel(String name, Supplier<? extends Item> item) {
