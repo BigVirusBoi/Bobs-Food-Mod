@@ -21,6 +21,7 @@ public class IceCreamItem extends Item {
         super(properties);
     }
 
+    @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
         PlayerEntity player = entityLiving instanceof PlayerEntity ? (PlayerEntity) entityLiving : null;
         if (player instanceof ServerPlayerEntity) {
@@ -62,6 +63,7 @@ public class IceCreamItem extends Item {
         return SoundInit.ICE_CREAM_LICK.get();
     }
 
+    @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         return DrinkHelper.startDrinking(worldIn, playerIn, handIn);
     }

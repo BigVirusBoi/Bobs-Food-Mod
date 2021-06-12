@@ -23,6 +23,7 @@ public class ItemInit {
     public static final RegistryObject<Item> KNIFE = registerNoModel("knife", () ->
             new KnifeItem(new Item.Properties().group(FoodMod.GROUP).setNoRepair()
                     .defaultMaxDamage(64).maxDamage(64)));
+
     public static final RegistryObject<Item> HONEYED_APPLE = registerFood("honeyed_apple", ModFoods.HONEYED_APPLE);
     public static final RegistryObject<Item> DIAMOND_APPLE = registerFood("diamond_apple", ModFoods.DIAMOND_APPLE);
     public static final RegistryObject<Item> ICE_CREAM = registerItem("ice_cream");
@@ -33,11 +34,12 @@ public class ItemInit {
     public static final RegistryObject<Item> SALT = registerItem("salt");
     public static final RegistryObject<Item> BUTTER = registerFood("butter", ModFoods.BUTTER);
     public static final RegistryObject<Item> FRIED_EGG = registerFood("fried_egg", ModFoods.FRIED_EGG);
+    public static final RegistryObject<Item> CHOCOLATE = registerFood("chocolate", ModFoods.CHOCOLATE);
 
     public static final RegistryObject<Item> ICE_CREAM_CONE = registerFood("ice_cream_cone", ModFoods.ICE_CREAM_CONE);
     public static final RegistryObject<IceCreamItem> STRAWBERRY_ICE_CREAM = registerIceCream("strawberry_ice_cream");
+    public static final RegistryObject<IceCreamItem> CHOCOLATE_ICE_CREAM = registerIceCream("chocolate_ice_cream");
     public static final RegistryObject<IceCreamItem> BANANA_ICE_CREAM = registerUnobtainableIceCream("banana_ice_cream");
-    public static final RegistryObject<IceCreamItem> CHOCOLATE_ICE_CREAM = registerUnobtainableIceCream("chocolate_ice_cream");
     public static final RegistryObject<IceCreamItem> LEMON_ICE_CREAM = registerUnobtainableIceCream("lemon_ice_cream");
     public static final RegistryObject<IceCreamItem> MANGO_ICE_CREAM = registerUnobtainableIceCream("mango_ice_cream");
     public static final RegistryObject<IceCreamItem> VANILLA_ICE_CREAM = registerUnobtainableIceCream("vanilla_ice_cream");
@@ -47,7 +49,6 @@ public class ItemInit {
             new BlockNamedItem(BlockInit.STRAWBERRIES.get(), new Item.Properties().group(FoodMod.GROUP)));
 
     // Unobtainable (for now)
-    public static final RegistryObject<Item> CHOCOLATE = registerUnobtainableFood("chocolate", ModFoods.CHOCOLATE);
     public static final RegistryObject<Item> BANANA = registerUnobtainableFood("banana", ModFoods.BANANA);
     public static final RegistryObject<Item> ORANGE = registerUnobtainableFood("orange", ModFoods.ORANGE);
     public static final RegistryObject<Item> TOMATO = registerUnobtainableFood("tomato", ModFoods.TOMATO);
@@ -62,11 +63,6 @@ public class ItemInit {
     private static RegistryObject<Item> register(String name, Supplier<? extends Item> item) {
         NEEDS_MODELS.add(name);
         return ITEMS.register(name, item);
-    }
-
-    private static RegistryObject<Item> registerNoModel(String name) {
-        Item item = new Item(new Item.Properties().group(FoodMod.GROUP));
-        return registerNoModel(name, () -> item);
     }
 
     private static RegistryObject<Item> registerNoModel(String name, Supplier<? extends Item> item) {

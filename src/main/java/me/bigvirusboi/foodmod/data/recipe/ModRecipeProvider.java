@@ -36,6 +36,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .patternLine("DAD")
                 .patternLine(" D ").build(consumer);
 
+        buildShapelessRecipe(ItemInit.CHOCOLATE.get(), 1, Items.COCOA_BEANS)
+                .addIngredient(Items.COCOA_BEANS).addIngredient(Items.MILK_BUCKET).addIngredient(Items.SUGAR)
+                .build(consumer);
         buildShapelessRecipe(ItemInit.BUTTER.get(), 1, Items.MILK_BUCKET)
                 .addIngredient(Items.MILK_BUCKET).addIngredient(Items.MILK_BUCKET).addIngredient(ItemInit.SALT.get())
                 .build(consumer);

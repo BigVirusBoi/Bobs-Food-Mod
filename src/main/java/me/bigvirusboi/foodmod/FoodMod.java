@@ -18,18 +18,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nonnull;
 
 @Mod(FoodMod.MOD_ID)
 @Mod.EventBusSubscriber(modid = FoodMod.MOD_ID)
 public class FoodMod {
-    // TODO villager trade bacon?
-    //  net.minecraft.entity.merchant.villager.VillagerTrades.java
     public static final String MOD_ID = "bobs_food_mod";
-    public static final Logger LOGGER = LogManager.getLogger();
 
     public FoodMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
